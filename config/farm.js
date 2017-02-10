@@ -1,8 +1,8 @@
 var farm = {
-    "url": "http://localhost",
+    "url": "http://ekskog.net",
     "port": ":3000",
     "deviceAPI" :"/device/",
     "teleAPI": "/tele/"
 }
 
-module.exports = farm;
+module.exports = farm;o
