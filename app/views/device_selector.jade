@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    .jumbotron
+        label(for='basic-url') Select Windmill
+        form.bs-example.bs-example-form(role='form', method='post', action="/dm")
+            .row
+                .col-lg-12
+                    .input-group
+                        span.input-group-btn
+                            button.btn.btn-primary(type='submit')
+                                | select                
+                        select#form.form-control(name = "deviceIdx")
+                            each device, i in deviceIDs
+                                option(value=i) #{device}
+
+
+

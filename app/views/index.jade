@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    .jumbotron
+
+        form(method='post', name='gwurl')
+            fieldset
+                .form-group.row
+                    .col-sm-9
+                        .input-group.row
+                            span#basic-addon1.input-group-addon gateway url
+                            input.form-control(type='text', placeholder=gwurl, aria-describedby='basic-addon1')
+                .form-group.row
+                    .col-sm-6
+                        .input-group.row 
+                            input.btn.btn-space.btn-primary(type='submit', name='choice', value='accept')
+                            input.btn.btn-space.btn-default(type='submit', name='choice', value='change')
+
+
+
+                            

@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .jumbotron
+    label(for='basic-url') Gateway URL
+
+    form.bs-example.bs-example-form(role='form', method='post', name='gwurl')
+      .row
+        .col-lg-12
+          .input-group
+            span.input-group-btn
+              button.btn.btn-primary(type='submit', name='choice', value='accept')
+                | accept
+              button.btn.btn-warning(type='submit', name='choice', value='change')
+                | change                
+            input.form-control(type='text', placeholder=gwurl, name='url')
+

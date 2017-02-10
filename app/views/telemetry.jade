@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  .jumbotron
+      
+      h3 telemetry status
+      if status
+        p started (press pause to cancel)
+      else
+        p stopped (press play to start)
+
+      hr  
+      h3 additional info
+      p #{ msg }
+      if frequency
+        p message sending frequency: #{ frequency }
+      if chaos
+        p mal-functioning unit: #{ chaos }
+      
+
+

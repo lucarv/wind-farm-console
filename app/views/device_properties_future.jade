@@ -1,0 +1,40 @@
+extends layout
+
+block content
+    .jumbotron
+        h3 edit baseline for turbine: #{device}
+        hr
+        form(action='/device_properties', method='post', id='formb')
+          fieldset
+            .form-group.row
+              .col-sm-3
+                input.form-control(type='text', name='ActivePower', placeholder='Active Power') 
+              .col-sm-3
+                input.form-control(type='text', name='WindDirection', placeholder='Wind Direction') 
+              .col-sm-3
+                input.form-control(type='text', name='WindSpeed', placeholder='Wind Speed')       
+              .col-sm-3
+                input.form-control(type='text', name='NacelleDirection', placeholder='Nacelle Direction') 
+            .form-group.row                             
+              .col-sm-3
+                input.form-control(type='text', name='NacelTmpAvg', placeholder='Average Nacelle Temperature') 
+              .col-sm-3
+                input.form-control(type='text', name='AmbTemp', placeholder='Ambient Temperature') 
+              .col-sm-3
+                input.form-control(type='text', name='Production', placeholder='Production') 
+              .col-sm-3
+                input.form-control(type='text', name='GearOilTemp', placeholder='Gear Oil Temperature') 
+            .form-group.row                             
+              .col-sm-3
+                input.form-control(type='text', name='GearPresAvg', placeholder='Average Gear Pressure')                 
+              .col-sm-3
+                input.form-control(type='text', name='GeneratorRPM', placeholder='Generator RPM') 
+              .col-sm-3
+                input.form-control(type='text', name='RotorRPM', placeholder='Rotor RPM')                             
+
+
+        hr
+        button.btn.btn-primary(type='submit', form='formb', value='Submit') Submit
+
+      
+ 

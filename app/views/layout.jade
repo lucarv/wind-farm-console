@@ -1,0 +1,59 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width')
+    title= title
+    block css
+      link(href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel='stylesheet')
+      link(rel='stylesheet', href='/css/tooltip.css')
+      link(rel='stylesheet', href='/css/style.css')
+      link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel="stylesheet")
+      link(rel='stylesheet', href='/css/style.css')
+    block js
+      if ENV_DEVELOPMENT
+        script(src='http://localhost:35729/livereload.js')
+  body
+  .container.fluid
+    nav.navbar.navbar-custom( role="navigation" )
+      .navbar-header
+        button.navbar-toggle.collapsed( type="button", data-toggle="collapse", data-target="#navbar-inverse", aria-expanded="false", aria-controls="navbar")
+          span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        a.navbar-brand(href="#") 
+            <img src="img/brand.png" width="22" height="22" alt="brand">
+        
+ 
+      #navbar-inverse.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li.active 
+            a( href="/") 
+              span.glyphicon.glyphicon-home            
+          li 
+            a( href="/status", data-tooltip='check telemetry status' ) 
+              span.glyphicon.glyphicon-info-sign              
+          li 
+            a( href="/start", data-tooltip='start telemetry' ) 
+              span.glyphicon.glyphicon-play
+          li 
+            a( href="/stop", data-tooltip='pause telemetry' ) 
+              span.glyphicon.glyphicon-pause
+          li 
+            a( href="/chaos", data-tooltip='simulate faulty unit' ) 
+              span.glyphicon.glyphicon-warning-sign
+          li 
+            a( href="/reset", data-tooltip='reset faulty unit'  ) 
+              span.glyphicon.glyphicon-off              
+              
+        ul.nav.navbar-nav.navbar-right
+          li 
+            a( href="/gs", data-tooltip='global settings'  ) 
+              span.glyphicon.glyphicon-cog
+          li  
+            a( href="/dm", data-tooltip='unit settings'  ) 
+              span.glyphicon.glyphicon-modal-window                
+
+
+    block content

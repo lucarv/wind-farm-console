@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    .jumbotron
+      form(role='form', action="/gs", method="post")
+        .form-group.row  
+          .col-sm-2
+            label(for='type') device type
+            select#form.form-control(name = "type")
+              option(value=1) short
+              option(value=2) long                           
+
+          .col-sm-3
+            label(for='interval') messaging frequency
+            input.form-control(type='text', name='interval', placeholder=currentTimer) 
+        button.btn.btn-primary(type='submit') submit
+
+
+   
+
+
+
+
