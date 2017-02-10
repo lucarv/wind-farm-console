@@ -93,7 +93,7 @@ router.get('/status', function (req, res, next) {
                 status = body.status;
                 res.render('telemetry', {
                     title: 'wind farm',
-                    msg: 'last sent message: ' + dateFormat(body.timestamp, "yyyy-mm-dd h:MM:ss"),
+                    msg: 'last sent message: ' + dateFormat(body.timestamp, "yyyy-mm-dd HH:MM:ss"),
                     status: body.status,
                     chaos: (body.chaos === -1 ? 'none' : body.chaos),
                     frequency: body.frequency
