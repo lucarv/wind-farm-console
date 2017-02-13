@@ -5,4 +5,4 @@ var farm = {
     "teleAPI": "/tele/"
 }
 
-module.exports = farm;o
+module.exports = farm;

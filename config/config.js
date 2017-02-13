@@ -8,7 +8,7 @@ var config = {
     app: {
       name: 'vkConsole'
     },
-    port: process.env.PORT || 3030,
+    port: process.env.PORT || 3300,
   },
 
   test: {
@@ -16,7 +16,7 @@ var config = {
     app: {
       name: 'vkConsole'
     },
-    port: process.env.PORT || 3030,
+    port: process.env.PORT || 3300,
   },
 
   production: {
